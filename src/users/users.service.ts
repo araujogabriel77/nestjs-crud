@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import User from './interfaces/User.interface';
+import { User } from './interfaces/user.interface';
 
 @Injectable()
 export class UsersService {
@@ -7,7 +7,8 @@ export class UsersService {
         {
             id: 1,
             name: 'jaca',
-            email: 'jaca@gmail.com'
+            email: 'jaca@gmail.com',
+            avatar_url: 'https://uifaces.co/our-content/donated/rSuiu_Hr.jpg'
         }
     ];
 

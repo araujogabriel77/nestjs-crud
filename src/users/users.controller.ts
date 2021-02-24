@@ -1,7 +1,7 @@
 
 import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 import { UsersService } from './users.service';
-import User from './interfaces/User.interface';
+import { User } from './interfaces/user.interface';
 
 @Controller('users')
 export class UsersController {
@@ -24,7 +24,8 @@ export class UsersController {
         const user = {
             id: Number(id),
             name: createUser.name,
-            email: createUser.email
+            email: createUser.email,
+            avatar_url: createUser.avatar_url
         }
         return this.usersService.updateUser(user)
     }
